@@ -1,0 +1,249 @@
+/******************************************
+/* 
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+h1 {
+  position: absolute;
+  margin-top: 20em;
+}
+
+#monitor_back {
+  width: 22em;
+  height: 10em;
+  border-radius: 50% 50% 0 0;
+}
+
+#monitor_front,
+#screen_border {
+  border-radius: 10%;
+}
+
+#console_top {
+  border-radius: 10%;
+  transform: perspective(0.5em) rotateX(0.5deg);
+}
+
+#console_bottom {
+  border-radius: 0 0 10% 10%;
+  transform: perspective(0.5em) rotateX(-0.5deg);
+}
+
+.button {
+  border-radius: 30% 30% 10% 10%;
+  border: none;
+}
+
+.button_top {
+  border-radius: 30% 30% 10% 10%;
+}
+
+li{
+  list-style: none;
+  border: 1px solid aqua;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+body,
+#monitor_front,
+#screen_border,
+#screen,
+#console,
+#console_top,
+#control,
+.button_row {
+  display:flex;
+}
+
+body {
+  margin-top: 1em;
+  width: 100%;
+  justify-content: center;
+}
+
+#monitor_front,
+#screen_border,
+#screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#monitor_back,
+#console,
+#console_top,
+#console_bottom {
+  position: absolute;
+}
+
+#monitor_back,
+#console_top {
+  z-index: -1;
+}
+
+#console_bottom {
+  z-index: -2;
+}
+
+#monitor_back {
+  align-items: flex-start;
+}
+
+#monitor_front {
+  width: 22em;
+  height: 21em;
+  margin-top: 3em;
+}
+
+#screen_border {
+  width: 20em;
+  height: 19em;
+}
+
+#screen {
+  width: 16em;
+  height: 16em;
+  flex-wrap: wrap;
+}
+
+#console {
+  justify-content: center;
+  margin-top: 23.7em;
+}
+
+#console_top {
+  width: 18.5em;
+  height: 6em;
+  align-items: flex-end;
+}
+
+#console_bottom {
+  margin-top: 5.8em;
+  width: 18.8em;
+  height: 2.5em;
+}
+
+#control {
+  height: 5.5em;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: flex-start;
+}
+
+.button {
+  height: 2em;
+  width: 4em;
+  z-index: 1;
+  margin: 0.3em;
+  justify-content: center;
+}
+
+.button_row {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.button_top {
+  height: 1em;
+  width: 3em;
+  z-index: 2;
+}
+
+
+ul,
+li {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  width: 1em;
+  height: 1em;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+body {
+  background-color: #C5D08A;
+}
+
+#monitor_back,
+#console_top {
+  background-color: #FFE7F0;
+}
+
+#monitor_front,
+#console_bottom {
+  background-color: #FED3DB;
+}
+
+#screen_border {
+  background-color: #FFB15D;
+}
+
+#screen {
+  background-color: green;
+}
+
+.pixel {
+  background-color: #FEFF92;
+}
+
+#button_white {
+  background-color: #faf9e1;
+}
+
+#button_purple {
+  background-color: #c8a2e8;
+}
+
+#button_blue {
+  background-color: #96b1fa;
+}
+
+#button_orange {
+  background-color: orange;
+}
+
+#button_pink {
+  background-color: pink;
+}
+
+#button_green {
+  background-color: #b0e866;
+}
+
+.button_top {
+  background-color: #FEFF92;
+  opacity: 30%;
+}
+
+#button_white .button_top {
+  background-color: white;
+  opacity: 60%;
+}
+
+#color_output {
+  display: none;
+}
